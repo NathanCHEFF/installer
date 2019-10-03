@@ -1,2 +1,2 @@
 # installer
-Code by mi frend @Jezik Kach
+Code by  @Jezik Kachinsky
