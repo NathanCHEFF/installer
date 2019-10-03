@@ -7,7 +7,7 @@ class programs
 	*/
 	var $file_progname = 'programs.txt';
 
-	var $version = '0/01 (10/03/2019 by jezik kachinskiy)';
+	var $version = '0/01 (10/03/2019 by jezik kachinskiy';
 
 	/*next vars work on armbian*/
 	var $install_cmd = 'sudo apt-get --force-yes -y install';
@@ -52,7 +52,9 @@ class programs
 	}
 
 	private function checker($name){
-		return 'boolean, 1 if not installed';
+		shell_exec('whereis '. $name,$p);
+		if($p != 'not found') return true;
+		return false;
 	}
 
 	public function helps(){
